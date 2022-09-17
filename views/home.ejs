@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HOME</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="phone.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="navbar" style="z-index: 50;">
+        <div id="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlmWQIREILSoydATMYzqHU1BHc0SFelH15FQ&usqp=CAU" alt="MyComplaint.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Our Services</a></li>
+            <!-- <li class="item"><a href="#client-section">Our Clients</a></li> -->
+            <li class="item"><a href="#contact">File Complaint</a></li>
+            <div class="right">
+              <form class="" action="/logout" method="post">
+                <button class="btn" >Log Out</button>
+              </form>
+
+            </div>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <marquee behavior="scrolldown" direction="left to right" scrollamount="35">
+            <h1>Welcome to Complaint Section!!! </h1>
+        </marquee>
+
+        <p>India's first and fastest hostel problem resolver .Here you can file a complaint regarding the problem you are facing.You are just a click away.  </p>
+        <p>Your problem would be resolved as soon as possible as per the availiability of the appointed persons. </p>
+        <!-- <button class="btn">Order Now</button> -->
+    </section>
+    <section id="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services" style="width: 90%;">
+            <div class="box">
+                <img src="https://media.istockphoto.com/photos/electrician-engineer-work-tester-measuring-voltage-and-current-of-picture-id1150199550?k=20&m=1150199550&s=612x612&w=0&h=uLO-MdjR2uNiX6swMsa-kTPJwvcWBkoCBlHoLhOtMbw=" alt="">
+                <h2 class="h-secondary center">Electrician</h2>
+                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, culpa suscipit error
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et qui, repudiandae similique nam, recusandae quidem ab asperiores ex, aut fugit labore veritatis facere?
+                    sint delectus ab dolorum nam. Debitis facere, incidunt voluptates eos, mollitia voluptatem iste sunt
+                    voluptas beatae facilis labore, omnis sint quae eum.</p>
+            </div>
+            <div class="box">
+                <img src="https://wallpaperaccess.com/full/1398625.jpg" alt="">
+                <h2 class="h-secondary center">Data Center</h2>
+                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, culpa suscipit error
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus provident fugiat aliquam minima at explicabo. Earum eveniet quaerat, sunt molestias nesciunt quas! Quis.
+                    sint delectus ab dolorum nam. Debitis facere, incidunt voluptates eos, mollitia voluptatem iste sunt
+                    voluptas beatae facilis labore, omnis sint quae eum.</p>
+            </div>
+            <div class="box">
+                <img src="https://us.123rf.com/450wm/andreypopov/andreypopov1602/andreypopov160201000/52751279-close-up-of-male-plumber-repairing-sink-in-bathroom.jpg?ver=6" alt="">
+                <h2 class="h-secondary center">Plumber</h2>
+                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, culpa suscipit error
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde laudantium a incidunt animi ad, ab dignissimos vero? Unde numquam odit repudiandae perferendis nisi.
+
+                    sint delectus ab dolorum nam. Debitis facere, incidunt voluptates eos, mollitia voluptatem iste sunt
+                    voluptas beatae facilis labore, omnis sint quae eum.</p>
+            </div>
+
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_cN0AZymg655Isl4HBTg9hLhQC8DYSGSs5w&usqp=CAU" alt="">
+                <h2 class="h-secondary center">Carpenter</h2>
+                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem, culpa suscipit error
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde laudantium a incidunt animi ad, ab dignissimos vero? Unde numquam odit repudiandae perferendis nisi.
+
+                    sint delectus ab dolorum nam. Debitis facere, incidunt voluptates eos, mollitia voluptatem iste sunt
+                    voluptas beatae facilis labore, omnis sint quae eum.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="h-primary center">File Complaint</h1>
+        <div id="contact-box">
+            <form action="/complaints" method="post">
+                <div class="form-group">
+                    <label for="name">Block Number: </label>
+                    <input type="text" name="blockNo" id="name" placeholder="Enter your Block Number">
+                </div>
+                <div class="form-group">
+                    <label for="email">Room Number: </label>
+                    <input type="text" name="roomNo" id="email" placeholder="Enter your Room Number">
+                </div>
+                <div class="form-group">
+                <label>Type of issue : </label>
+                <br>
+        <select name="issue">
+          <option value="Electrician">Electrician</option>
+          <option value="Carpenter">Caprenter</option>
+          <option value="Data center">Data center</option>
+          <option value="Other">Other</option>
+        </select>
+    </div>
+        <div class="form-group">
+            <label for="message">Description about the Issues : </label>
+            <textarea name="description" id="message" cols="30" rows="10"></textarea>
+        </div>
+
+        <button class="stn" type="submit" name="button">SUBMIT</button>
+
+        </form>
+
+        </div>
+    </section>
+
+</body>
+</html>

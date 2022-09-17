@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ADMIN</title>
+    <link rel="stylesheet" href="styles1.css">
+  </head>
+  <body>
+
+    <nav id="navbar" style="z-index: 50;">
+        <div id="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlmWQIREILSoydATMYzqHU1BHc0SFelH15FQ&usqp=CAU" alt="MyComplaint.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Our Services</a></li>
+            <!-- <li class="item"><a href="#client-section">Our Clients</a></li> -->
+            <li class="item"><a href="#contact">File Complaint</a></li>
+            <div class="right">
+              <form class="" action="/adminLogout" method="post">
+                <button type="submit" class="btn">Log Out</button>
+              </form>
+
+            </div>
+        </ul>
+    </nav>
+
+
+
+
+     <h1>List of the Complaints</h1>
+
+       <% if(Electrician.length!=0){ %>
+        <h2>Electrician</h2>
+          <div class="same_complaint">
+          <%   for(var i=0;i<Electrician.length;i++){ %>
+              <% if(Electrician[i].status===0){ %>
+               <div class="complaint">
+                 <form action="/delete" method="post">
+                <table>
+                  <tr>
+                    <td>Name :</td>
+                    <td><%=Electrician[i].name%></td>
+                  </tr>
+                  <tr>
+                    <td>Block-Number :</td>
+                    <td><%=Electrician[i].blockNo%></td>
+                  </tr>
+                  <tr>
+                    <td>Room-Number :</td>
+                    <td><%=Electrician[i].roomNo%></td>
+                  </tr>
+                  <tr>
+                    <td>Issue :</td>
+                    <td><%=Electrician[i].issue%></td>
+                  </tr>
+                  <tr>
+                    <td>  Description :</td>
+                    <td><%=Electrician[i].description%></td>
+                  </tr>
+                </table>
+                 <input type="checkbox" name="checkbox" value=<%=Electrician[i]._id%> onChange="this.form.submit()">
+                 </form>
+               </div>
+          <%   } %>
+          <%   } %>
+       </div>
+       <% } %>
+
+       <% if(Electrician.length!=0){ %>
+        <h2>Electrician</h2>
+          <div class="same_complaint">
+          <%   for(var i=0;i<Electrician.length;i++){ %>
+              <% if(Electrician[i].status===0){ %>
+               <div class="complaint">
+                 <form action="/delete" method="post">
+                <table>
+                  <tr>
+                    <td>Name :</td>
+                    <td><%=Electrician[i].name%></td>
+                  </tr>
+                  <tr>
+                    <td>Block-Number :</td>
+                    <td><%=Electrician[i].blockNo%></td>
+                  </tr>
+                  <tr>
+                    <td>Room-Number :</td>
+                    <td><%=Electrician[i].roomNo%></td>
+                  </tr>
+                  <tr>
+                    <td>Issue :</td>
+                    <td><%=Electrician[i].issue%></td>
+                  </tr>
+                  <tr>
+                    <td>  Description :</td>
+                    <td><%=Electrician[i].description%></td>
+                  </tr>
+                </table>
+                 <input type="checkbox" name="checkbox" value=<%=Electrician[i]._id%> onChange="this.form.submit()">
+                 </form>
+               </div>
+          <%   } %>
+          <%   } %>
+       </div>
+       <% } %>
+
+
+       <% if(Carpenter.length!=0){ %>
+         <h2>Carpenter</h2>
+          <div class="same_complaint">
+          <%   for(var i=0;i<Carpenter.length;i++){ %>
+              <% if(Carpenter[i].status===0){ %>
+               <div class="complaint">
+                 <form action="/delete" method="post">
+                <table>
+                  <tr>
+                    <td>Name :</td>
+                    <td><%=Carpenter[i].name%></td>
+                  </tr>
+                  <tr>
+                    <td>Block-Number :</td>
+                    <td><%=Carpenter[i].blockNo%></td>
+                  </tr>
+                  <tr>
+                    <td>Room-Number :</td>
+                    <td><%=Carpenter[i].roomNo%></td>
+                  </tr>
+                  <tr>
+                    <td>Issue :</td>
+                    <td><%=Carpenter[i].issue%></td>
+                  </tr>
+                  <tr>
+                    <td>  Description :</td>
+                    <td><%=Carpenter[i].description%></td>
+                  </tr>
+                </table>
+                 <input type="checkbox" name="checkbox" value=<%=Carpenter[i]._id%> onChange="this.form.submit()">
+                 </form>
+               </div>
+          <%   } %>
+          <%   } %>
+       </div>
+       <% } %>
+
+
+       <% if(Datacenter.length!=0){ %>
+        <h2>Datacenter</h2>
+          <div class="same_complaint">
+          <%   for(var i=0;i<Datacenter.length;i++){ %>
+              <% if(Datacenter[i].status===0){ %>
+               <div class="complaint">
+                 <form action="/delete" method="post">
+                <table>
+                  <tr>
+                    <td>Name :</td>
+                    <td><%=Datacenter[i].name%></td>
+                  </tr>
+                  <tr>
+                    <td>Block-Number :</td>
+                    <td><%=Datacenter[i].blockNo%></td>
+                  </tr>
+                  <tr>
+                    <td>Room-Number :</td>
+                    <td><%=Datacenter[i].roomNo%></td>
+                  </tr>
+                  <tr>
+                    <td>Issue :</td>
+                    <td><%=Datacenter[i].issue%></td>
+                  </tr>
+                  <tr>
+                    <td>  Description :</td>
+                    <td><%=Datacenter[i].description%></td>
+                  </tr>
+                </table>
+                 <input type="checkbox" name="checkbox" value=<%=Datacenter[i]._id%> onChange="this.form.submit()">
+                 </form>
+               </div>
+          <%   } %>
+          <%   } %>
+       </div>
+       <% } %>
+
+
+       <% if(Others.length!=0){ %>
+        <h2>Others</h2>
+          <div class="same_complaint">
+          <%   for(var i=0;i<Others.length;i++){ %>
+              <% if(Others[i].status===0){ %>
+               <div class="complaint">
+                 <form action="/delete" method="post">
+                <table>
+                  <tr>
+                    <td>Name :</td>
+                    <td><%=Others[i].name%></td>
+                  </tr>
+                  <tr>
+                    <td>Block-Number :</td>
+                    <td><%=Others[i].blockNo%></td>
+                  </tr>
+                  <tr>
+                    <td>Room-Number :</td>
+                    <td><%=Others[i].roomNo%></td>
+                  </tr>
+                  <tr>
+                    <td>Issue :</td>
+                    <td><%=Others[i].issue%></td>
+                  </tr>
+                  <tr>
+                    <td>  Description :</td>
+                    <td><%=Others[i].description%></td>
+                  </tr>
+                </table>
+                 <input type="checkbox" name="checkbox" value=<%=Others[i]._id%> onChange="this.form.submit()">
+                 </form>
+               </div>
+          <%   } %>
+          <%   } %>
+       </div>
+       <% } %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
